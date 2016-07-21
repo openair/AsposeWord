@@ -1,0 +1,111 @@
+.the-legend {
+    background: #FF9;
+    height: 25px;
+    font-size: 12px; 
+    border: solid 1px black;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 6px;
+}
+.the-fieldset {
+
+    border: solid 1px black;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+
+}
+.form-Search-Criteria{
+    height: 250px;
+}
+.selec-Search-Criteria{
+    margin-top: -15px;
+}
+.selec-location-Criteria{
+    margin-top: -15px;
+    //margin-left: 13px
+
+
+}
+.the-section{
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+#searchDiv{
+    position: relative;
+    z-index: 5;
+    color: white;
+   
+    
+   
+}
+#mpDiv{
+
+    position: relative;
+    width: 100%;
+
+
+}
+
+.logo{
+  background: url(../img/logo.png) no-repeat center center fixed; width: 100%;
+  
+}
+.bgimage {
+    background: url(../img/bg_img.jpg) no-repeat center center fixed; 
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+.logoimage {
+    background: url(../img/logo.jpg) no-repeat center center fixed; 
+    width: 100%;
+    height: 100px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    //background-size: cover;
+
+}
+.bgimage-inside {
+    padding-top: 2.91%; /* this is actually (426/1140)*100 */
+}
+.transparent {
+    background:#7f7f7f;
+    background:rgba(0,0,0,0.2);
+}
+body {
+    background: #ccc;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    background: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%;
+}
+.mystyle {
+    height: 30px;
+    font-size: 10px;
+    margin-top:5px;
+    font-weight: bold; 
+}

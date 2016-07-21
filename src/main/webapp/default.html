@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Aspose Restful Client</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/legend.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/load.js"></script>
+    </head>
+
+    <body  class="bgimage" onload="init()">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+
+                <div class="navbar-header" style="margin-top:-10px">
+                    <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Video</a></li>
+                    <li><a href="#">Source Code</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container col-lg-12">
+            <div class="col-lg-12 ">
+            </div>
+            <div class="col-lg-12" id="searchDiv">
+                <div class="col-lg-12">
+                    <label></label>
+                </div>
+                <div class="col-lg-4">
+                    <label></label>
+                </div>
+                <form role="form">
+                    <fieldset  class="col-lg-4 the-fieldset transparent">
+                        <legend class="the-legend"><b>Aspose Restful API Client </b></legend>
+                        <div class="col-lg-2">
+                            <label></label>
+                        </div>
+                        <div class="form-group col-lg-8 form-Search-Criteria" >
+                            <div class="col-lg-12 selec-Search-Criteria">
+                                <form name="form1">
+
+                                    <select class="form-control  mystyle" id="restMethods" onchange="fireRestMethods()">
+                                        <option selected> Select Request Method</option> 
+                                        <option > PUT /words/convert</option>
+                                        <option > POST /words/{name}/protection</option>
+                                        <option > GET /words/{name}/protection</option>
+
+                                    </select> 
+
+                                    <input class="form-control mystyle " type="text" name="chooseFile" id="chooseFile" value="Choose File" >  
+
+                                    <select class="form-control  mystyle " Style="display: none" id="conversionFormat" onchange="selectConversionFormat()">
+                                        <option selected> Select Conversion Format</option>  
+                                        <option > DOC</option> 
+                                        <option > DOT</option> 
+                                        <option > DOCX</option> 
+                                        <option > DOCM</option> 
+                                        <option > DOTX</option> 
+                                        <option > DOTM</option> 
+                                        <option > FLAT_OPC</option> 
+                                        <option > FLAT_OPC_MACRO_ENABLED</option> 
+                                        <option > FLAT_OPC_TEMPLATE</option> 
+                                        <option > FLAT_OPC_TEMPLATE_MACRO_ENABLED</option> 
+                                        <option > RTF</option> 
+                                        <option > WORD_ML</option> 
+                                        <option > PDF</option> 
+                                        <option > XPS</option> 
+                                        <option > XAML_FIXED</option> 
+                                        <option > SWF</option> 
+                                        <option > SVG</option> 
+                                        <option > HTML_FIXED</option> 
+                                        <option > OPEN_XPS</option> 
+                                        <option > PS</option> 
+                                        <option > HTML</option> 
+                                        <option > MHTML</option> 
+                                        <option > EPUB</option> 
+                                        <option > ODT</option> 
+                                        <option > OTT</option> 
+                                        <option > TEXT</option> 
+                                        <option > XAML_FLOW</option> 
+                                        <option > XAML_FLOW_PACK</option> 
+                                        <option > TIFF</option> 
+                                        <option > PNG</option> 
+                                        <option > BMP</option> 
+                                        <option > EMF</option> 
+                                        <option > JPEG</option> 
+                                    </select>
+                                    <!--<input class="form-control mystyle" type="file" id="txtValue" value="Enter Value To Search" onfocus="if(this.value == 'Enter Value To Search') { this.value = ''; }" >-->
+
+                                    <input class="form-control btn btn-primary mystyle" type="button" id="btnFind" name ="btnFind" value="Fetch Response" 
+                                           onclick="findFeatures();" >
+                                </form>
+                            </div> <br><br>
+                            <div class="col-lg-12"  >
+                                <label></label>
+                                
+                            </div>
+                             <div class="col-lg-12"  >
+                                <label></label>
+                                
+                            </div>
+                            <div class="col-lg-12"id="output" >
+                              
+                                <span><b>Response:</b></span>
+                            </div>
+                             <div class="col-lg-12" >
+                                <label></label>
+                                
+                            </div>
+                             <div class="col-lg-12" >
+                                <label></label>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <label></label>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="col-lg-4">
+                    <label></label>
+                </div>
+                <div class="col-lg-12">
+                    <label></label>
+                </div>
+
+            </div>
+            <div class="col-lg-2">
+                <label></label>
+            </div>
+
+        </div>
+
+    </body>
+</html>
+
