@@ -1,6 +1,7 @@
 package com.asposewords.restfulapi;
 
 import com.aspose.storage.api.StorageApi;
+import com.aspose.storage.model.ResponseMessage;
 import com.aspose.words.Document;
 import com.aspose.words.ProtectionType;
 import com.aspose.words.api.WordsApi;
@@ -13,6 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -24,7 +26,6 @@ import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriInfo;
 import net.sf.json.JSONObject;
-import com.aspose.storage.model.ResponseMessage;
 
 @Path("/words")
 public class ServiceClass {
@@ -60,9 +61,9 @@ public class ServiceClass {
 
     @POST
     @Path("/protection")
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces({ "application/json" })
     @Consumes("application/x-www-form-urlencoded")
-    public String protection(@QueryParam("src") String src) {
+    public String protection(@FormParam("src") String src) {
 
         String response = "";
         String destPath = "";

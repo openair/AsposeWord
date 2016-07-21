@@ -37,7 +37,7 @@ public class HttpClientClass {
         HttpClient client = new DefaultHttpClient();
         List<NameValuePair> nameValuePairs;
         HttpPost post = null;
-        String line = "";
+        String strResponse = "",line="";
         post = new HttpPost("http://localhost:8080/AsposeWords/rest/words/protection");
 
         try {
@@ -49,13 +49,16 @@ public class HttpClientClass {
             BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
 
             while ((line = rd.readLine()) != null) {
-                line=""+line;
+               if(line!=null){
+                   strResponse=""+line;
+               }
+               
             }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return line;
+        return strResponse;
     }
 
     public String httpPutMethod(String converstionFormat, String fileName) throws UnsupportedEncodingException {
